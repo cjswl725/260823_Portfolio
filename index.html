@@ -162,16 +162,10 @@
     background: var(--bg-subtle);
   }
   .hero-stage {
-    padding: 72px 6% 64px; display: grid;
+    padding: 48px 6% 40px; display: grid;
     grid-template-columns: minmax(0,1.1fr) minmax(300px,.85fr);
     align-items: center; gap: 8%;
   }
-  .kicker {
-    display: inline-flex; align-items: center; gap: 10px; margin-bottom: 22px;
-    color: var(--text-secondary); font-size: 12px; font-weight: 700; letter-spacing: 1.6px;
-  }
-  .kicker-dot { flex: none; width: 8px; height: 8px; background: var(--color-primary-500); }
-  .kicker-text { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .hero-copy h1 { max-width: 660px; margin: 0; font-size: clamp(32px,4.6vw,52px); font-weight: 800; line-height: 1.2; letter-spacing: -1px; }
   .hero-copy h1 em { color: var(--color-primary-500); font-style: normal; }
   .hero-copy p { max-width: 520px; margin: 22px 0 30px; color: var(--text-secondary); font-size: 15.5px; line-height: 1.75; }
@@ -209,17 +203,17 @@
   .hero-tag-list span { padding: 6px 11px; border: 1px solid var(--border-default); border-radius: var(--radius-sm); color: var(--text-primary); font-size: 11px; font-weight: 600; }
 
   /* ---------- 공통 섹션 헤더 ---------- */
-  .section { padding: 88px 0 0; }
-  .section-head { max-width: 640px; margin: 0 auto 44px; text-align: center; }
+  .section { padding: 56px 0 0; }
+  .section-head { max-width: 640px; margin: 0 auto 32px; text-align: center; }
   .section-eyebrow { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 14px; color: var(--color-primary-500); font-size: 12px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; }
   .section-eyebrow::before, .section-eyebrow::after { content: ""; width: 24px; height: 1px; background: var(--border-default); }
   .section-head h2 { margin: 0; font-size: clamp(24px,3vw,32px); font-weight: 800; letter-spacing: -.4px; }
   .section-head p { margin: 12px 0 0; color: var(--text-secondary); font-size: 14.5px; line-height: 1.7; }
 
   /* ---------- 핵심 역량 카드 ---------- */
-  .competency-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; border: 1px solid var(--border-subtle); border-bottom: 0; }
+  .competency-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; border: 1px solid var(--border-subtle); border-bottom: 0; }
   .competency-card {
-    position: relative; min-height: 210px; padding: 30px 26px; border-right: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);
+    position: relative; padding: 22px 22px; border-right: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);
     background: var(--bg-elevated); transition: background var(--duration-fast) linear;
   }
   .competency-card:last-child { border-right: 0; }
@@ -236,59 +230,86 @@
   /* ---------- 경력 타임라인 ---------- */
   .timeline { max-width: 820px; margin: 0 auto; border-top: 1px solid var(--border-subtle); }
   .timeline-item {
-    position: relative; padding: 30px 0 30px 168px; border-bottom: 1px solid var(--border-subtle);
+    position: relative; padding: 20px 0 20px 168px; border-bottom: 1px solid var(--border-subtle);
   }
   .timeline-period {
-    position: absolute; left: 0; top: 30px; width: 148px;
+    position: absolute; left: 0; top: 20px; width: 148px;
     font-size: 12.5px; font-weight: 700; letter-spacing: .2px; color: var(--text-tertiary); font-variant-numeric: tabular-nums;
   }
-  .timeline-item h3 { margin: 0 0 4px; font-size: 18px; font-weight: 700; }
-  .timeline-item .timeline-role { display: block; margin-bottom: 14px; color: var(--color-primary-500); font-size: 12.5px; font-weight: 700; letter-spacing: .2px; text-transform: uppercase; }
-  .timeline-item ul { display: flex; flex-direction: column; gap: 8px; }
-  .timeline-item li { position: relative; padding-left: 16px; color: var(--text-secondary); font-size: 14px; line-height: 1.6; }
+  .timeline-item h3 { margin: 0 0 3px; font-size: 17px; font-weight: 700; }
+  .timeline-item .timeline-role { display: block; margin-bottom: 10px; color: var(--color-primary-500); font-size: 12px; font-weight: 700; letter-spacing: .2px; text-transform: uppercase; }
+  .timeline-item ul { display: flex; flex-direction: column; gap: 5px; }
+  .timeline-item li { position: relative; padding-left: 16px; color: var(--text-secondary); font-size: 13.5px; line-height: 1.5; }
   .timeline-item li::before { content: "—"; position: absolute; left: 0; top: 0; color: var(--text-tertiary); }
-  .timeline-sub { margin-top: 8px; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
-  .timeline-sub li { font-size: 13px; color: var(--text-secondary); }
+  .timeline-sub { margin-top: 5px; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
+  .timeline-sub li { font-size: 12.5px; color: var(--text-secondary); }
   .timeline-sub li::before { content: "·"; }
-  .timeline-sub .timeline-sub { margin-top: 6px; }
-  .timeline-sub .timeline-sub li { font-size: 12.5px; color: var(--text-tertiary); }
+  .timeline-sub .timeline-sub { margin-top: 4px; }
+  .timeline-sub .timeline-sub li { font-size: 12px; color: var(--text-tertiary); }
   .timeline-sub .timeline-sub li::before { content: "-"; }
   @media (max-width: 640px) {
     .timeline-item { padding-left: 0; padding-top: 46px; }
     .timeline-period { position: static; display: block; margin-bottom: 8px; }
   }
 
-  /* ---------- 증빙자료 ---------- */
-  .evidence-note {
-    max-width: 820px; margin: 0 auto 32px; padding: 14px 18px; border: 1px solid var(--border-default); border-left: 3px solid var(--color-primary-500);
-    background: var(--bg-subtle); color: var(--text-secondary); font-size: 12.5px; line-height: 1.6; text-align: left;
-  }
+  /* ---------- 증빙자료 (핵심 성과 카드에 자료를 붙일 때 재사용할 수 있도록 스타일은 남겨둡니다) ---------- */
   .evidence-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; border: 1px solid var(--border-subtle); border-bottom: 0; border-right: 0; }
   .evidence-card {
-    display: flex; flex-direction: column; padding: 26px; border-right: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);
+    display: flex; flex-direction: column; padding: 20px; border-right: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);
     background: var(--bg-elevated); transition: background var(--duration-fast) linear;
   }
   .evidence-card:hover { background: var(--bg-subtle); }
-  .evidence-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 16px; }
+  .evidence-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
   .evidence-icon { flex: 0 0 auto; color: var(--text-primary); }
   .evidence-icon svg { width: 22px; height: 22px; }
   .evidence-category { color: var(--color-primary-500); font-size: 10.5px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; white-space: nowrap; }
   .evidence-card h3 { margin: 0 0 4px; font-size: 16px; font-weight: 700; letter-spacing: -.1px; }
   .evidence-meta { margin: 0 0 10px; color: var(--text-tertiary); font-size: 11.5px; font-weight: 600; font-variant-numeric: tabular-nums; }
   .evidence-card p { margin: 0; flex: 1; color: var(--text-secondary); font-size: 13.5px; line-height: 1.6; }
-  .evidence-footer { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border-subtle); }
+  .evidence-footer { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border-subtle); }
   .evidence-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-primary); font-size: 12px; font-weight: 700; letter-spacing: .2px; text-transform: uppercase; }
   .evidence-link svg { width: 14px; height: 14px; }
   .evidence-pending { display: inline-flex; align-items: center; gap: 6px; color: var(--text-tertiary); font-size: 11.5px; font-weight: 600; letter-spacing: .2px; text-transform: uppercase; }
 
+  /* ---------- 업무 자료 갤러리 ---------- */
+  .work-gallery-heading { margin: 40px 0 16px; font-size: 12px; font-weight: 700; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: .8px; }
+  .work-gallery { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+  .work-item { border: 1px solid var(--border-subtle); background: var(--bg-elevated); cursor: pointer; transition: border-color var(--duration-fast) linear; }
+  .work-item:hover { border-color: var(--text-primary); }
+  .work-item img { width: 100%; height: 190px; object-fit: cover; display: block; background: var(--bg-subtle); }
+  .work-item figcaption { padding: 14px 16px; }
+  .work-item strong { display: block; font-size: 13.5px; font-weight: 700; margin-bottom: 3px; }
+  .work-item span { display: block; font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+  @media (max-width: 900px) { .work-gallery { grid-template-columns: 1fr; } }
+
+  .lightbox {
+    display: none; position: fixed; inset: 0; z-index: 200; padding: 40px;
+    background: rgba(10,11,20,.88); align-items: center; justify-content: center; flex-direction: column; gap: 14px;
+  }
+  .lightbox.is-open { display: flex; }
+  .lightbox img { max-width: min(100%, 1100px); max-height: 78vh; object-fit: contain; border-radius: 2px; }
+  .lightbox-caption { color: #EDEFF7; font-size: 13px; text-align: center; max-width: 700px; }
+  .lightbox-close {
+    position: absolute; top: 22px; right: 26px; width: 40px; height: 40px; border-radius: var(--radius-sm);
+    border: 1px solid rgba(255,255,255,.3); background: transparent; color: #fff; cursor: pointer; display: grid; place-items: center;
+  }
+  .lightbox-close:hover { background: rgba(255,255,255,.12); }
+  .lightbox-close svg { width: 18px; height: 18px; }
+
   /* ---------- 스킬 ---------- */
-  .skills-layout { display: grid; grid-template-columns: .8fr .7fr 1.1fr; gap: 48px; align-items: start; border-top: 1px solid var(--border-subtle); padding-top: 40px; }
-  .skill-block h3 { margin: 0 0 22px; font-size: 12px; font-weight: 700; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: .8px; }
-  .lang-row { margin-bottom: 18px; }
+  .skills-layout { display: grid; grid-template-columns: .8fr .7fr 1.1fr; gap: 40px; align-items: start; border-top: 1px solid var(--border-subtle); padding-top: 28px; }
+  .skill-block h3 { margin: 0 0 16px; font-size: 12px; font-weight: 700; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: .8px; }
+  .lang-row { margin-bottom: 14px; }
   .lang-row-head { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 13px; font-weight: 600; }
-  .lang-row-head span:last-child { color: var(--text-tertiary); font-variant-numeric: tabular-nums; }
+  .lang-row-head .lang-percent { color: var(--text-tertiary); font-variant-numeric: tabular-nums; }
   .lang-bar { height: 3px; background: var(--border-subtle); overflow: hidden; }
   .lang-bar i { display: block; height: 100%; background: var(--text-primary); transition: width 900ms var(--ease-out); }
+  .lang-note { margin: 8px 0 0; font-size: 11.5px; color: var(--text-tertiary); line-height: 1.5; }
+  .lang-range-track { height: 3px; background: var(--border-subtle); position: relative; }
+  .lang-range-track::before, .lang-range-track::after { content: ""; position: absolute; top: -3px; width: 1px; height: 9px; background: var(--border-default); }
+  .lang-range-track::before { left: 0; }
+  .lang-range-track::after { right: 0; }
+  .lang-range-dates { display: flex; justify-content: space-between; margin-top: 8px; font-size: 11px; font-weight: 600; color: var(--text-primary); font-variant-numeric: tabular-nums; }
   .tool-chips { display: flex; flex-wrap: wrap; gap: 8px; }
   .tool-chips span { padding: 9px 14px; border: 1px solid var(--border-default); border-radius: var(--radius-sm); background: transparent; font-size: 12.5px; font-weight: 600; color: var(--text-secondary); }
 
@@ -298,30 +319,7 @@
   .course-row-head span:last-child { flex: none; color: var(--text-tertiary); font-size: 11.5px; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
   .course-row p { margin: 0; font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; }
 
-  /* ---------- 연락처 ---------- */
-  .contact-card {
-    max-width: 980px; margin: 0 auto; padding: 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
-    border: 1px solid var(--border-subtle); background: var(--bg-elevated);
-  }
-  .contact-info-row { display: flex; align-items: center; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--border-subtle); }
-  .contact-info-row:last-child { border-bottom: 0; }
-  .contact-info-icon { flex: 0 0 auto; width: 20px; height: 20px; display: grid; place-items: center; color: var(--text-primary); }
-  .contact-info-icon svg { width: 18px; height: 18px; }
-  .contact-info-text small { display: block; color: var(--text-tertiary); font-size: 10.5px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; margin-bottom: 3px; }
-  .contact-info-text span { font-size: 14px; font-weight: 600; }
-  .copy-btn { margin-left: auto; flex: 0 0 auto; height: 30px; padding: 0 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-default); background: transparent; color: var(--text-secondary); font-size: 11px; font-weight: 700; letter-spacing: .2px; text-transform: uppercase; cursor: pointer; }
-  .copy-btn:hover { border-color: var(--text-primary); color: var(--text-primary); }
-
-  .contact-form { display: flex; flex-direction: column; gap: 12px; }
-  .contact-form label { font-size: 11px; font-weight: 700; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: .5px; }
-  .contact-form input, .contact-form textarea {
-    width: 100%; padding: 12px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-default);
-    background: var(--bg-base); color: var(--text-primary); font-family: inherit; font-size: 14px; resize: vertical;
-  }
-  .contact-form input:focus, .contact-form textarea:focus { outline: 1px solid var(--text-primary); outline-offset: 1px; }
-  .form-status { font-size: 12.5px; color: var(--text-tertiary); min-height: 16px; }
-
-  footer { margin-top: 90px; padding: 26px 0 36px; text-align: center; color: var(--text-tertiary); font-size: 11.5px; letter-spacing: .3px; border-top: 1px solid var(--border-subtle); }
+  footer { margin-top: 56px; padding: 20px 0 28px; text-align: center; color: var(--text-tertiary); font-size: 11.5px; letter-spacing: .3px; border-top: 1px solid var(--border-subtle); }
 
   /* 기본값은 보이는 상태입니다. JS가 정상 실행됐을 때만 .reveal-pending을 추가해 페이드인 애니메이션을 적용하므로,
      스크립트 오류가 나도 콘텐츠 자체가 사라지지 않습니다. */
@@ -334,7 +332,6 @@
     .competency-grid, .evidence-grid { grid-template-columns: 1fr; }
     .competency-card, .evidence-card { border-right: 0 !important; }
     .skills-layout { grid-template-columns: 1fr; gap: 28px; }
-    .contact-card { grid-template-columns: 1fr; padding: 28px; }
     .nav-links { display: none; }
     .nav-toggle { display: block; }
     .nav-status span.status-text { display: none; }
@@ -342,9 +339,9 @@
   .nav-links.is-open { display: flex; position: absolute; top: 68px; left: 0; right: 0; flex-direction: column; padding: 10px 24px 16px; background: var(--bg-base); border-bottom: 1px solid var(--border-subtle); gap: 2px; }
 
   @media print {
-    .site-nav, .hero-cta, .contact-form, .nav-toggle, footer { display: none !important; }
+    .site-nav, .hero-cta, .nav-toggle, footer { display: none !important; }
     body { background: #fff; }
-    .hero, .competency-card, .evidence-card, .contact-card { border-color: #ddd !important; }
+    .hero, .competency-card, .evidence-card { border-color: #ddd !important; }
     section { scroll-margin-top: 0; }
   }
 </style>
@@ -355,7 +352,7 @@
      ▼▼▼ 아래 PORTFOLIO_DATA 객체의 값만 수정하면 페이지 전체 내용이 바뀝니다 ▼▼▼
      - 마크업/CSS는 건드릴 필요 없습니다.
      - 증빙자료(evidence)의 link 값에 실제 파일 URL(구글 드라이브, 노션 등)을 넣으면
-       "자료 보기" 버튼이 활성화됩니다. link를 비워두면 "요청 시 제공"으로 표시됩니다.
+       "자료 보기" 버튼이 활성화됩니다. link를 비워두면 "관련 자료"로 표시됩니다.
      - 로컬 파일을 첨부하고 싶다면 index.html과 같은 폴더에 assets 폴더를 만들고
        link: "assets/수출실적표.pdf" 처럼 상대경로를 넣어도 됩니다.
      ========================================================= -->
@@ -366,10 +363,9 @@ const PORTFOLIO_DATA = {
     name: "천지혜",
     initials: "J",
     role: "해외법인관리팀",
-    roleEn: "Overseas Sales Operation",
-    tagline_line1: "Order to Cash 해외 수출",
-    tagline_line2: "프로세스를 운영하는 Operations Specialist",
-    intro: "국제통상학을 전공하고, HD현대일렉트릭 배전해외영업1부에서 해외영업지원 업무를 수행했습니다. 캐나다 워킹홀리데이를 통해 실전 비즈니스 영어 커뮤니케이션 역량을 쌓았고, 현재는 ㈜리브스메드 영업관리팀에서 국내외 영업관리 업무를 담당하고 있습니다.",
+    tagline_line1: "Order to Cash 프로세스를 운영하는",
+    tagline_line2: "Operations Specialist",
+    intro: "해외 수출업무와 해외법인 관리 업무를 수행하며, 글로벌 비즈니스 환경에서의 경험과 역량을 갖춘 Operations Specialist입니다. 해외 End-to-End 수주 프로세스 운영 및 관리, 미국법인 In-Market관리, Sales Dashboard 구축, 물류업체/물류비 관리, FTA CO 발급 및 관리 등 다양한 업무를 수행하며, AI 기반 데이터 자동화를 통해 업무 효율성을 높이고 있습니다.",
     statusChip: "새로운 기회를 찾고 있습니다",
     email: "cjswl725@naver.com",
     phone: "010-7617-8090",
@@ -384,25 +380,38 @@ const PORTFOLIO_DATA = {
     stat2Value: "해외법인 관리",
     stat2Label: "미국, 일본",
     tagListLabel: "핵심 역량",
-    tags: ["해외 End-to-End 수주 프로세스 운영 및 관리", "미국법인 In-Market관리", "Sales Dashboard 구축", "물류업체/물류비 관리", "FTA CO 발급 및 관리","AI기반 데이터 자동화"]
+    tags: ["미국법인 In-Market관리", "Sales Dashboard 구축", "FTA CO 발급 및 관리", "물류업체 관리 및 비딩", "AI기반 데이터 자동화"]
   },
 
   competencies: [
     {
-      title: "국내외 영업관리",
-      desc: "㈜리브스메드 영업관리팀에서 국내외 영업 프로세스와 데이터를 관리하며 영업 조직의 업무 효율을 지원합니다.",
+      title: "미국법인 In-Market관리",
+      desc: "미국·일본 법인의 매출·물류 데이터를 통합 관리하고 A/R Aging 등 정례 보고 체계를 구축해 현지 법인 운영을 지원합니다.",
       icon: "globe"
     },
     {
-      title: "해외영업 지원 & 무역실무",
-      desc: "HD현대일렉트릭 배전해외영업1부에서 해외 바이어 대응과 수출 관련 업무를 지원하며 무역 실무 감각을 쌓았습니다.",
-      icon: "handshake"
+      title: "Sales Dashboard 구축",
+      desc: "데이터 자동화 도구를 활용해 글로벌 매출 시각화 대시보드를 직접 설계·구현하고, 주간 리포트 배포를 자동화했습니다.",
+      icon: "chart"
     },
     {
-      title: "글로벌 커뮤니케이션 역량",
-      desc: "캐나다 워킹홀리데이 현지 근무 경험과 OPIc IH 등급을 통해 실전 비즈니스 영어 커뮤니케이션 역량을 증명합니다.",
-      icon: "target"
+      title: "물류업체 관리 및 견적관리",
+      desc: "운송 수단별 운임 비교와 물류업체 견적 프로세스를 표준화하여 물류비 절감과 신속한 의사결정을 지원합니다.",
+      icon: "truck"
+    },
+    {
+      title: "업무 프로세스 구축",
+      desc: "수출 업무 프로세스를 표준화하고 가이드라인·Process Map을 구축하여 조직 전체의 업무 효율과 내부 통제를 강화합니다.",
+      icon: "process"
     }
+  ],
+
+  // 핵심 성과를 증명하는 실제 결과물(스크린샷 등)을 여기에 추가하세요.
+  // image에는 assets 폴더에 넣은 이미지 파일의 상대경로를 적으면 됩니다.
+  // 예: assets/work-samples/sales-dashboard.png (파일을 그 폴더에 넣기만 하면 됩니다)
+  // 배열이 비어있으면 이 섹션 자체가 자동으로 숨겨집니다.
+  workSamples: [
+    // { image: "assets/work-samples/sales-dashboard.png", title: "Sales Dashboard", desc: "글로벌 매출 시각화 대시보드 스크린샷" },
   ],
 
   career: [
@@ -534,15 +543,13 @@ const PORTFOLIO_DATA = {
     { category: "어학성적", title: "OPIc 성적표", meta: "IH 등급 · 취득일을 입력해보세요", desc: "비즈니스 영어 커뮤니케이션 역량을 증명하는 공인 말하기 평가 성적입니다.", icon: "badge", link: "" },
     { category: "경력증명", title: "HD현대일렉트릭 경력증명서", meta: "2021.03 - 2023.03 · 배전해외영업1부", desc: "해외영업지원 업무 수행 경력을 증명하는 경력·재직증명서입니다.", icon: "doc", link: "" },
     { category: "경력증명", title: "㈜리브스메드 재직증명서", meta: "2025.02 - 재직중 · 영업관리팀", desc: "국내외 영업관리 업무를 수행 중인 현재 재직 사실을 증명하는 재직증명서입니다.", icon: "doc", link: "" },
-    { category: "자격증", title: "재무회계과정 2급", meta: "2019.03 취득", desc: "영업관리 업무에 필요한 재무·회계 기초 실무 역량을 증명하는 자격증입니다.", icon: "cert", link: "" },
-    { category: "자격증", title: "엑셀데이터통계과정 2급", meta: "2018.09 취득", desc: "영업 데이터 관리 및 분석에 활용되는 엑셀 실무 역량을 증명하는 자격증입니다.", icon: "cert", link: "" },
-    { category: "해외경험", title: "캐나다 워킹홀리데이 증빙", meta: "2023.07 - 2024.07", desc: "현지 실무를 통한 실전 영어 커뮤니케이션 및 글로벌 적응력을 보여주는 경험입니다.", icon: "rocket", link: "" }
   ],
 
   languages: [
-    { name: "영어 (OPIc IH)", level: 85 }
+    { name: "영어 (OPIc IH)", level: 85 },
+    { name: "워킹 홀리데이 (캐나다)", range: { start: "2023.07", end: "2024.07" } }
   ],
-  tools: ["Excel (상급)", "Vibe Coding", "GTQ 1급 (그래픽 편집)"],
+  tools: ["Excel (상급)", "Vibe Coding", "GTQ 1급 (그래픽 편집)", "재무회계과정 2급", "엑셀데이터통계과정 2급"],
   courses: [
     { title: "수출입 물류비절감 핵심 실무 (25기)", date: "2025.08.29", desc: "한-미 FTA 활용, 운임 절감 등 실제 업무에서 수행한 물류비 최적화 프로젝트의 이론적 기반이 된 실무 교육입니다." },
     { title: "미 관세부과 관련 수출 중소기업 지원 정책 설명회", date: "2025.04.09", desc: "미국의 관세 정책 변화에 대응하는 수출 중소기업 지원 방안을 다룬 정책 설명회로, 미국 법인 물류·통관 업무와 직접 연결되는 대외 환경 이해도를 보여줍니다." }
@@ -561,11 +568,9 @@ const PORTFOLIO_DATA = {
     </div>
     <ul class="nav-links" id="navLinks">
       <li><a href="#intro">소개</a></li>
+      <li><a href="#competency">핵심성과</a></li>
       <li><a href="#career">경력</a></li>
-      <li><a href="#competency">핵심역량</a></li>
-      <li><a href="#evidence">증빙자료</a></li>
       <li><a href="#skills">스킬</a></li>
-      <li><a href="#contact">연락처</a></li>
     </ul>
     <div style="display:flex; align-items:center; gap:10px;">
       <span class="nav-status"><i></i><span class="status-text" id="navStatus">새로운 기회를 찾고 있습니다</span></span>
@@ -580,7 +585,6 @@ const PORTFOLIO_DATA = {
   <section class="hero" id="intro">
     <div class="hero-stage">
       <div class="hero-copy">
-        <div class="kicker"><span class="kicker-dot"></span><span class="kicker-text" id="kickerText">OVERSEAS SALES &amp; ACCOUNT MANAGEMENT</span></div>
         <h1><span id="taglineLine1">숫자로 증명하는</span><br/><em id="taglineLine2">글로벌 영업 성과.</em></h1>
         <p id="introText"></p>
         <div class="hero-cta">
@@ -588,7 +592,7 @@ const PORTFOLIO_DATA = {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
             이력서 다운로드
           </button>
-          <a class="btn btn-secondary" href="#contact">연락하기</a>
+          <button class="btn btn-secondary" id="contactCta">연락하기</button>
         </div>
       </div>
 
@@ -622,11 +626,12 @@ const PORTFOLIO_DATA = {
 <div class="wrap">
   <section class="section" id="competency">
     <div class="section-head reveal">
-      <span class="section-eyebrow">01 — Competency</span>
-      <h2>핵심 역량</h2>
-      <p>해외영업 전 과정에서 반복적으로 성과를 만들어낸 세 가지 역량입니다.</p>
+      <span class="section-eyebrow">01 — Achievements</span>
+      <h2>핵심 성과</h2>
     </div>
     <div class="competency-grid" id="competencyGrid"></div>
+    <h3 class="work-gallery-heading" id="workGalleryHeading" style="display:none;">업무 자료</h3>
+    <div class="work-gallery" id="workGallery"></div>
   </section>
 </div>
 
@@ -635,36 +640,20 @@ const PORTFOLIO_DATA = {
     <div class="section-head reveal">
       <span class="section-eyebrow">02 — Career</span>
       <h2>경력 사항</h2>
-      <p>최근 경력부터 순서대로 정리했습니다.</p>
     </div>
     <div class="timeline" id="careerTimeline"></div>
   </section>
 </div>
 
 <div class="wrap">
-  <section class="section" id="evidence">
-    <div class="section-head reveal">
-      <span class="section-eyebrow">03 — Evidence</span>
-      <h2>업무 성과</h2>
-      <p>업무 관련 성과를 뒷받침하는 자료입니다.</p>
-    </div>
-    <div class="evidence-note reveal">
-      본 페이지는 프론트엔드 단일 파일로 제작되어 별도 서버에 파일을 저장하지 않습니다. 실제 자료는 위 항목의 링크(구글 드라이브 등)로 연결하거나, 요청 시 이메일로 별도 전달합니다.
-    </div>
-    <div class="evidence-grid" id="evidenceGrid"></div>
-  </section>
-</div>
-
-<div class="wrap">
   <section class="section" id="skills">
     <div class="section-head reveal">
-      <span class="section-eyebrow">04 — Skills</span>
+      <span class="section-eyebrow">03 — Skills</span>
       <h2>스킬 &amp; 교육이수</h2>
-      <p>업무에서 실제로 활용하는 어학 역량, 도구, 그리고 관련 교육 이수 내역입니다.</p>
     </div>
     <div class="skills-layout reveal">
       <div class="skill-block">
-        <h3>어학 역량</h3>
+        <h3>어학 역량 및 해외경험</h3>
         <div id="languageList"></div>
       </div>
       <div class="skill-block">
@@ -679,49 +668,17 @@ const PORTFOLIO_DATA = {
   </section>
 </div>
 
-<div class="wrap">
-  <section class="section" id="contact">
-    <div class="section-head reveal">
-      <span class="section-eyebrow">05 — Contact</span>
-      <h2>연락처</h2>
-      <p>편하신 방법으로 연락 주시면 빠르게 답변드리겠습니다.</p>
-    </div>
-    <div class="contact-card reveal">
-      <div class="contact-info">
-        <div class="contact-info-row" id="contactNameRow" style="display:none;">
-          <span class="contact-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg></span>
-          <div class="contact-info-text"><small>이름</small><span id="contactName"></span></div>
-        </div>
-        <div class="contact-info-row">
-          <span class="contact-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-          <div class="contact-info-text"><small>Email</small><span id="contactEmail"></span></div>
-          <button class="copy-btn" data-copy-target="contactEmail">복사</button>
-        </div>
-        <div class="contact-info-row">
-          <span class="contact-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1.1.4 2.2.7 3.2a2 2 0 0 1-.5 2.1L8 10.3a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c1 .4 2.1.6 3.2.7a2 2 0 0 1 1.7 2Z"/></svg></span>
-          <div class="contact-info-text"><small>Phone</small><span id="contactPhone"></span></div>
-          <button class="copy-btn" data-copy-target="contactPhone">복사</button>
-        </div>
-      </div>
-
-      <form class="contact-form" id="contactForm">
-        <label for="cfName">이름</label>
-        <input type="text" id="cfName" placeholder="보내시는 분 성함">
-        <label for="cfMessage">메시지</label>
-        <textarea id="cfMessage" rows="5" placeholder="전달하실 내용을 입력해주세요"></textarea>
-        <button type="submit" class="btn btn-primary" style="align-self:flex-start;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m22 2-7 20-4-9-9-4Z"/></svg>
-          메일로 보내기
-        </button>
-        <div class="form-status" id="formStatus"></div>
-      </form>
-    </div>
-  </section>
-</div>
-
 <footer>
   <span id="footerText"></span>
 </footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="닫기">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
 
 <script>
 (function () {
@@ -740,6 +697,8 @@ const PORTFOLIO_DATA = {
     handshake: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 3 3a1 1 0 1 0 3-3l-3.7-3.7a3 3 0 0 0-4.2 0l-.5.5a1 1 0 1 1-3-3l2.5-2.5a5 5 0 0 1 7 0L21 8"/><path d="m3 8 2.5-2.5a5 5 0 0 1 3.7-1.4"/><path d="m2 9 4 4"/></svg>',
     target: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>',
     chart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>',
+    truck: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="14" height="11"/><path d="M15 9h4l3 3v5h-7z"/><circle cx="6" cy="19" r="2"/><circle cx="17" cy="19" r="2"/></svg>',
+    process: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4"/><path d="M9 21H5a2 2 0 0 1-2-2v-4"/><path d="M15 3h4a2 2 0 0 1 2 2v4"/><path d="M15 21h4a2 2 0 0 0 2-2v-4"/><circle cx="12" cy="12" r="3"/></svg>',
     doc: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg>',
     badge: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="5"/><path d="M8.2 13 6 22l6-3 6 3-2.2-9"/></svg>',
     cert: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 10h8M8 14h5"/></svg>',
@@ -761,7 +720,6 @@ const PORTFOLIO_DATA = {
     text('brandName', profile.targetCompany || profile.name);
     if (profile.role) text('brandRole', profile.role + ' 포트폴리오');
     text('navStatus', profile.statusChip);
-    text('kickerText', (profile.roleEn || profile.role || '').toUpperCase());
     text('taglineLine1', profile.tagline_line1);
     text('taglineLine2', profile.tagline_line2);
     text('introText', profile.intro);
@@ -803,6 +761,40 @@ const PORTFOLIO_DATA = {
     });
   });
 
+  // ---- 업무 자료 갤러리 ----
+  safe('업무 자료 갤러리', function () {
+    var samples = list('workSamples');
+    if (!samples.length) return; // 비어있으면 섹션 자체를 표시하지 않습니다.
+    document.getElementById('workGalleryHeading').style.display = '';
+    var gallery = document.getElementById('workGallery');
+    samples.forEach(function (w) {
+      var item = el(
+        '<figure class="work-item">' +
+          '<img src="' + (w.image || '') + '" alt="' + (w.title || '') + '" loading="lazy">' +
+          '<figcaption><strong>' + (w.title || '') + '</strong><span>' + (w.desc || '') + '</span></figcaption>' +
+        '</figure>'
+      );
+      item.addEventListener('click', function () { openLightbox(w.image, (w.title || '') + (w.desc ? ' — ' + w.desc : '')); });
+      gallery.appendChild(item);
+    });
+  });
+
+  var lightbox = document.getElementById('lightbox');
+  function openLightbox(src, caption) {
+    document.getElementById('lightboxImg').src = src || '';
+    document.getElementById('lightboxCaption').textContent = caption || '';
+    lightbox.classList.add('is-open');
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('is-open');
+    document.getElementById('lightboxImg').src = '';
+  }
+  safe('라이트박스', function () {
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
+  });
+
   // ---- 경력 타임라인 ----
   safe('경력 타임라인', function () {
     var timeline = document.getElementById('careerTimeline');
@@ -832,36 +824,27 @@ const PORTFOLIO_DATA = {
     });
   });
 
-  // ---- 증빙자료 ----
-  safe('증빙자료', function () {
-    var evGrid = document.getElementById('evidenceGrid');
-    list('evidence').forEach(function (ev) {
-      var footer = ev.link
-        ? '<a class="evidence-link" href="' + ev.link + '" target="_blank" rel="noopener">자료 보기 ' + ICONS.linkIcon + '</a>'
-        : '<span class="evidence-pending">🔒 요청 시 제공</span>';
-      evGrid.appendChild(el(
-        '<div class="evidence-card reveal">' +
-          '<div class="evidence-top">' +
-            '<span class="evidence-icon">' + (ICONS[ev.icon] || ICONS.doc) + '</span>' +
-            '<span class="evidence-category">' + (ev.category || '') + '</span>' +
-          '</div>' +
-          '<h3>' + (ev.title || '') + '</h3>' +
-          '<p class="evidence-meta">' + (ev.meta || '') + '</p>' +
-          '<p>' + (ev.desc || '') + '</p>' +
-          '<div class="evidence-footer">' + footer + '</div>' +
-        '</div>'
-      ));
-    });
-  });
-
   // ---- 스킬 ----
   safe('어학 스킬', function () {
     var langList = document.getElementById('languageList');
     list('languages').forEach(function (l) {
+      // range가 있으면 퍼센트 바 대신 시작~종료 기간을 표시합니다 (예: 워킹홀리데이 기간).
+      if (l.range) {
+        langList.appendChild(el(
+          '<div class="lang-row">' +
+            '<div class="lang-row-head"><span>' + (l.name || '') + '</span></div>' +
+            '<div class="lang-range-track"></div>' +
+            '<div class="lang-range-dates"><span>' + (l.range.start || '') + '</span><span>' + (l.range.end || '') + '</span></div>' +
+          '</div>'
+        ));
+        return;
+      }
+      var note = l.note ? '<p class="lang-note">' + l.note + '</p>' : '';
       langList.appendChild(el(
         '<div class="lang-row">' +
-          '<div class="lang-row-head"><span>' + (l.name || '') + '</span><span>' + (l.level || 0) + '%</span></div>' +
+          '<div class="lang-row-head"><span>' + (l.name || '') + '</span><span class="lang-percent">' + (l.level || 0) + '%</span></div>' +
           '<div class="lang-bar"><i style="width:0%" data-level="' + (l.level || 0) + '"></i></div>' +
+          note +
         '</div>'
       ));
     });
@@ -883,40 +866,16 @@ const PORTFOLIO_DATA = {
   });
 
   // ---- 연락처 ----
-  safe('연락처 정보', function () {
-    if (profile.name) {
-      text('contactName', profile.name);
-      document.getElementById('contactNameRow').style.display = '';
-    }
-    text('contactEmail', profile.email);
-    text('contactPhone', profile.phone);
+  safe('연락하기 버튼', function () {
+    document.getElementById('contactCta').addEventListener('click', function () {
+      window.location.href = 'mailto:' + profile.email;
+    });
+  });
+
+  safe('푸터', function () {
     var now = new Date();
     var yyyymm = now.getFullYear() + String(now.getMonth() + 1).padStart(2, '0');
     text('footerText', '© ' + yyyymm + '_' + (profile.name || '') + ' · Portfolio');
-  });
-
-  safe('연락처 복사 버튼', function () {
-    document.querySelectorAll('.copy-btn[data-copy-target]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var copyText = document.getElementById(btn.getAttribute('data-copy-target')).textContent;
-        var done = function () { var old = btn.textContent; btn.textContent = '복사됨'; setTimeout(function () { btn.textContent = old; }, 1400); };
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(copyText).then(done).catch(done);
-        } else { done(); }
-      });
-    });
-  });
-
-  safe('문의 폼', function () {
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      var name = document.getElementById('cfName').value.trim();
-      var message = document.getElementById('cfMessage').value.trim();
-      var subject = encodeURIComponent('[포트폴리오 문의] ' + (name || '담당자'));
-      var body = encodeURIComponent((name ? name + '님 문의:\n\n' : '') + message);
-      window.location.href = 'mailto:' + profile.email + '?subject=' + subject + '&body=' + body;
-      document.getElementById('formStatus').textContent = '메일 앱이 열립니다. 전송이 안 되면 이메일 주소로 직접 보내주세요.';
-    });
   });
 
   // ---- 모바일 메뉴 토글 ----
@@ -931,7 +890,7 @@ const PORTFOLIO_DATA = {
 
   // ---- 스크롤 스파이 ----
   safe('스크롤 스파이', function () {
-    var sections = ['intro','career','competency','evidence','skills','contact'].map(function (id) { return document.getElementById(id); });
+    var sections = ['intro','career','competency','skills'].map(function (id) { return document.getElementById(id); });
     var links = Array.prototype.slice.call(navLinks.querySelectorAll('a'));
     function onScroll() {
       var pos = window.scrollY + 120;
