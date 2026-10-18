@@ -1,0 +1,163 @@
+<title>핵심성과 섹션 목업</title>
+<style>
+  :root{
+    --bg:#FFFFFF; --bg-subtle:#F2F3F8; --bg-overlay:#E7E9F1;
+    --ink:#16192B; --ink-2:#4B4E63; --ink-3:#9497A8;
+    --line:#E4E5EE; --line-2:#C9CBDA;
+    --accent:#1F2A5C;
+    --note:#8A5A1E; --note-bg:#FBF0E4; --note-line:#E9C98A;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg-subtle);color:var(--ink);font-family:'Roboto','Noto Sans KR',sans-serif;}
+  .page{max-width:980px;margin:0 auto;padding:48px 24px 80px;}
+
+  .intro{text-align:center;margin-bottom:36px;}
+  .intro .kicker{display:inline-flex;align-items:center;gap:10px;color:var(--ink-3);font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:10px;}
+  .intro .kicker::before,.intro .kicker::after{content:"";width:20px;height:1px;background:var(--line-2);}
+  .intro h1{margin:0 0 8px;font-size:22px;font-weight:800;letter-spacing:-.3px;}
+  .intro p{margin:0;color:var(--ink-2);font-size:13.5px;line-height:1.6;max-width:520px;margin:0 auto;}
+
+  .frame{background:#fff;border:1px solid var(--line);padding:40px 44px;}
+
+  .section-head{text-align:center;margin-bottom:28px;}
+  .section-eyebrow{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px;color:var(--accent);font-size:11px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;}
+  .section-eyebrow::before,.section-eyebrow::after{content:"";width:22px;height:1px;background:var(--line-2);}
+  .section-head h2{margin:0;font-size:26px;font-weight:800;letter-spacing:-.4px;}
+
+  .kept-wrap{position:relative;margin-bottom:8px;}
+  .tag{position:absolute;top:-11px;left:16px;background:var(--ink);color:#fff;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:4px 9px;z-index:2;}
+  .tag.new{background:var(--note);}
+
+  .comp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-bottom:0;}
+  .comp-card{padding:18px 16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .comp-card:last-child{border-right:0;}
+  .comp-idx{display:block;margin-bottom:12px;font-size:11px;font-weight:700;color:var(--ink-3);}
+  .comp-icon{width:28px;height:28px;margin-bottom:10px;color:var(--accent);}
+  .comp-icon svg{width:100%;height:100%;}
+  .comp-card h3{margin:0;font-size:13px;font-weight:700;line-height:1.35;}
+
+  .divider-picks{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:36px 0;}
+  .pick{border:1.5px dashed var(--note-line);background:var(--note-bg);padding:16px;}
+  .pick b{display:block;font-size:10.5px;font-weight:700;color:var(--note);text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px;}
+  .opt-a{font-size:11px;font-weight:700;color:var(--ink-3);text-transform:uppercase;letter-spacing:.8px;padding:4px 0;}
+  .opt-b{display:flex;align-items:center;gap:10px;color:var(--ink-3);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;}
+  .opt-b::before,.opt-b::after{content:"";flex:1;height:1px;background:var(--line-2);}
+
+  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-bottom:0;border-right:0;}
+  .work-card{padding:16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;}
+  .work-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;}
+  .work-icon{width:20px;height:20px;color:var(--ink);}
+  .work-icon svg{width:100%;height:100%;}
+  .work-cat{font-size:9.5px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.4px;}
+  .work-card h4{margin:0 0 8px;font-size:13px;font-weight:700;}
+  .work-thumb{height:64px;background:repeating-linear-gradient(135deg,var(--bg-subtle),var(--bg-subtle) 6px,var(--bg-overlay) 6px,var(--bg-overlay) 12px);border:1px solid var(--line);margin-bottom:8px;display:flex;align-items:center;justify-content:center;font-size:9.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.4px;}
+  .work-card p{margin:0 0 10px;font-size:10.5px;color:var(--ink-2);line-height:1.5;flex:1;}
+  .work-status{font-size:9.5px;font-weight:700;color:var(--ink-3);text-transform:uppercase;letter-spacing:.4px;padding-top:8px;border-top:1px solid var(--line);}
+
+  .legend{display:flex;justify-content:center;gap:26px;margin-top:28px;font-size:11.5px;color:var(--ink-2);}
+  .legend span{display:flex;align-items:center;gap:7px;}
+  .swatch{width:11px;height:11px;flex:none;}
+  .swatch.kept{background:var(--ink);}
+  .swatch.pick{background:var(--note);}
+
+  @media (max-width:720px){
+    .comp-grid{grid-template-columns:1fr 1fr;}
+    .divider-picks{grid-template-columns:1fr;}
+    .work-grid{grid-template-columns:1fr;}
+    .frame{padding:28px 20px;}
+  }
+</style>
+
+<div class="page">
+  <div class="intro">
+    <span class="kicker">이해 확인용 목업 · 실제 배포 아님</span>
+    <h1>핵심성과 섹션 — 구조 확인</h1>
+    <p>말씀하신 순서(① 핵심성과 카드 그대로 → ② 하단바 → ③ 첨부자료 카드)를 실제 사이트와 같은 스타일로 그려봤습니다. 하단바는 두 가지 안 중 골라주세요.</p>
+  </div>
+
+  <div class="frame">
+
+    <div class="kept-wrap">
+      <span class="tag">① 그대로 유지</span>
+      <div class="section-head" style="margin-top:10px;">
+        <span class="section-eyebrow">01 — Achievements</span>
+        <h2>핵심 성과</h2>
+      </div>
+      <div class="comp-grid">
+        <div class="comp-card">
+          <span class="comp-idx">01</span>
+          <span class="comp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
+          <h3>미국법인 In-Market관리</h3>
+        </div>
+        <div class="comp-card">
+          <span class="comp-idx">02</span>
+          <span class="comp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></span>
+          <h3>Sales Dashboard 구축</h3>
+        </div>
+        <div class="comp-card">
+          <span class="comp-idx">03</span>
+          <span class="comp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="14" height="11"/><path d="M15 9h4l3 3v5h-7z"/><circle cx="6" cy="19" r="2"/><circle cx="17" cy="19" r="2"/></svg></span>
+          <h3>물류업체 관리 및 견적관리</h3>
+        </div>
+        <div class="comp-card">
+          <span class="comp-idx">04</span>
+          <span class="comp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 0 0-2 2v4"/><path d="M9 21H5a2 2 0 0 1-2-2v-4"/><path d="M15 3h4a2 2 0 0 1 2 2v4"/><path d="M15 21h4a2 2 0 0 0 2-2v-4"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <h3>업무 프로세스 구축</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-picks">
+      <div class="pick">
+        <b>② 하단바 — 옵션 A (지금 적용된 방식)</b>
+        <div class="opt-a">업무 자료</div>
+      </div>
+      <div class="pick">
+        <b>② 하단바 — 옵션 B (좌우 실선)</b>
+        <div class="opt-b">업무 자료</div>
+      </div>
+    </div>
+
+    <div class="kept-wrap">
+      <span class="tag new">③ 새로 추가</span>
+      <div class="work-grid" style="margin-top:10px;">
+        <div class="work-card">
+          <div class="work-top">
+            <span class="work-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></span>
+            <span class="work-cat">업무 자료</span>
+          </div>
+          <h4>Sales Dashboard</h4>
+          <div class="work-thumb">스크린샷</div>
+          <p>글로벌 매출 시각화 대시보드 스크린샷</p>
+          <div class="work-status">확대 보기</div>
+        </div>
+        <div class="work-card">
+          <div class="work-top">
+            <span class="work-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></span>
+            <span class="work-cat">업무 자료</span>
+          </div>
+          <h4>물류비 비교 Table</h4>
+          <div class="work-thumb">스크린샷</div>
+          <p>운송 수단별 운임 비교 프로세스</p>
+          <div class="work-status">확대 보기</div>
+        </div>
+        <div class="work-card">
+          <div class="work-top">
+            <span class="work-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></span>
+            <span class="work-cat">업무 자료</span>
+          </div>
+          <h4>Process Map</h4>
+          <div class="work-thumb">스크린샷</div>
+          <p>통합 수출 프로세스 맵 (조직 배포용)</p>
+          <div class="work-status">확대 보기</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legend">
+    <span><i class="swatch kept"></i>① / ③ — 실제 구조 (검정 라벨)</span>
+    <span><i class="swatch pick"></i>② — 선택이 필요한 부분 (주황 점선)</span>
+  </div>
+</div>
